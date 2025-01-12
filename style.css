@@ -1,0 +1,64 @@
+/* 배민 글씨체 load */
+@font-face {
+    font-family: Hanna;
+    src: url(fonts/BMHANNAPro.ttf);
+}
+@font-face {
+    font-family: Euljiro;
+    src: url(fonts/BMEuljiro10yearslater.ttf);
+}
+
+/* 전체 글꼴을 배민 한나체로 설정 */
+body {
+    font-family: 'Hanna';
+}
+
+/* 시계 text */
+#clockText {
+    font-size: 44px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+/* 이미지 변경 버튼 */
+#backgroundChanger button {
+    font-family: 'Euljiro';
+    font-size: 16px;
+    /* 버튼 위치 */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: #bfbfbf; /* 버튼 글씨 색상 */
+    cursor: pointer;
+    outline: none; /* 윤곽선 없애기 */
+}
+/* 호버 시 색상 변환 */
+#backgroundChanger:hover {
+    color: #ffffff;
+}
+
+/* 날씨 geolocation */
+#weather {
+    font-family: 'Euljiro';
+    font-size: 18px;
+    /* 날씨 위치 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+}
+
+/* login */
+.hidden {
+    display: none;
+    /* username 위치 */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+}

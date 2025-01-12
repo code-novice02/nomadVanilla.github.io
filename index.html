@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromium</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <script type="module" src="./default.js"></script>
+    <script type="module" src="./clock.js"></script>
+    <script type="module" src="./backgroundImage.js"></script>
+    <script type="module" src="./geolocation.js"></script>
+    <script type="module" src="./login.js"></script>
+
+    <!-- clock -->
+    <div id="clockText">
+        <span>00:00:00</span>
+    </div>
+    <!-- Login -->
+    <div id="login">
+        <form id="login-form">
+
+        </form>
+        <h1 class="hidden" id="greeting"></h1>
+    </div>
+    <!-- To Do List -->
+    <div id="toDoList">
+        <span></span>
+    </div>
+    <!-- change background to Image -->
+    <div id="backgroundChanger">
+        <button>Default</button>
+    </div>
+    <!-- geolocation -->
+    <div id="weather">
+        <span>
+            00&deg;C, Seoul
+        </span>
+        <span>
+            / Clear
+        </span>
+    </div>
+</body>
+</html>
