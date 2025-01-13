@@ -54,11 +54,14 @@ body {
 }
 
 /* login */
-.hidden {
-    display: none;
+#login {
     /* username 위치 */
     position: fixed;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
+}
+
+.hidden {
+    display: none;
 }

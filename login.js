@@ -1,30 +1,35 @@
-
+// declare form, input, hidden greeting
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
-const link = document.querySelector("a");
+// declare string - class: hidden, inputValue: username
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
-const HIDDEN_CLASSNAME = "hidden"
-
-function onLoginSubmit(event) {
-    event.preventDefault();
+// loginForm: add hiddden tag | greeting: remove hidden tag, add innerText
+function paintGreetings(username) {
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = loginInput.value;
-    greeting.innerText = username;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    greeting.innerText = username;
 }
 
-function handleLinkClick(event) {
+// when LOGIN -> hide form and innerText username
+function clickLoginButton(event) {
     event.preventDefault();
+    const username = loginInput.value;
+    // modify localStorage -> set username
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
 }
 
-loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick);
+// store username > savedUserName
+const savedUserName = localStorage.getItem(USERNAME_KEY);
 
-
-const savedUsername = localStorage.getItem(USERNAME_KEY);
-
-if (savedUsername === null) {
-    loginfomr.classList.remove(HIDDEN_CLASSNAME);
+if (savedUserName === null) {
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", clickLoginButton);
+}
+else {
+    paintGreetings(savedUserName);
 }
