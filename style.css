@@ -15,7 +15,7 @@ body {
 
 /* 시계 text */
 #clockText {
-    font-size: 44px;
+    font-size: 50px;
     position: absolute;
     left: 50%;
     top: 30%;
@@ -33,7 +33,7 @@ body {
     padding: 10px 20px;
     background-color: transparent;
     border: none;
-    color: #bfbfbf; /* 버튼 글씨 색상 */
+    color: #dfdfdf; /* 버튼 글씨 색상 */
     cursor: pointer;
     outline: none; /* 윤곽선 없애기 */
 }
@@ -57,11 +57,48 @@ body {
 #login {
     /* username 위치 */
     position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
+    top: 50px;
+    right: 0px;
+    padding: 10px 0px;
 }
 
 .hidden {
     display: none;
+}
+
+#login-form {
+    align-items: center;
+    gap: 7px; /* input과 button 간격 */
+}
+
+#login-form input {
+    width: 25%; /* 기존 input 길이의 75% */
+    padding: 7px; /* 높이를 적절히 조정 */
+    font-size: 12px;
+    border: 1px solid #5c5c5c59; /* 다소 어두운 테두리 */
+    border-radius: 5px; /* 둥근 모서리 */
+    background-color: #bbbbbb; /* 흰 배경 */
+    color: #3c3c3c; /* 글자 색상 */
+    outline: none; /* 포커스 시 기본 윤곽선 제거 */
+    transition: border-color 0.3s ease;
+}
+
+#login-form button {
+    padding: 8px 7px; /* 상하 여백 8px, 좌우 여백 16px */
+    font-size: 12px;
+    font-family: inherit; /* 부모 폰트 스타일 상속 */
+    background-color: #5c5c5c; /* 어두운 계열 버튼 배경 */
+    color: #ffffee; /* 글자 색상 */
+    border: none;
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#greeting {
+    font-size: 22px;
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    padding: 10px 20px;
 }
